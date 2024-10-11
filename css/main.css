@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+html,
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    overflow-y: auto;
+    /* Manage vertical scrolling */
+}
+.arvo-regular {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.arvo-bold {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.arvo-regular-italic {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.arvo-bold-italic {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* !<uniquifier>: Use a unique and descriptive class name */
+/* !<weight>: Use a value from 300 to 800 */
+.open-sans-Regular {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* !<uniquifier>: Use a unique and descriptive class name */
+/* !<weight>: Use a value from 100 to 900 */
+
+.montserrat-Regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* **************************************************************************************************************************** */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    list-style: none;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+body {
+    padding: 0%;
+    margin: 0%;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+:root {
+    --Secondary-color: #27b9c2;
+    --primary-color: #9fa3a7;
+    --main-font: Arvo,
+        sans-serif;
+    --secondary-font: Montserrat,
+        sans-serif;
+}
+
+/* **************************************************************************************************************************** */
+.Main-All-Grid {
+
+    display: grid;
+    align-content: start;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: 25% 1fr 1fr 25%;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr;
+    grid-template-areas:
+        "Section-1 Section-1 Section-2 Section-2"
+        "Section-3 Section-4 Section-4 Section-5"
+        "Section-6 Section-7 Section-7 Section-5"
+        "Section-8 Section-9 Section-10 Section-10";
+}
+
+/* ?--------------------- */
+.Section-1 {
+    grid-area: Section-1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+
+.Section-1 .caption {
+    text-align: start;
+    width: 32%;
+}
+
+.Section-1 .section-img {
+    align-self: flex-end;
+    width: 15.5625rem;
+    margin: 3.125rem 0 0 0;
+}
+
+.Section-1 .discription-text {
+    color: var(--primary-color);
+    width: 104%;
+    line-height: 1.4;
+}
+
+.Section-1 h3 {
+    margin-top: .625rem;
+    margin-bottom: 1.25rem;
+    font-family: Arvo, sans-serif;
+    font-size: 1.375rem;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+
+.Section-1 .title {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ?--------------------- */
+.Section-2 {
+    grid-area: Section-2;
+    background-color: #F7F8F9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Section-2 .title {
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.Section-2 h1 {
+    font-family: var(--main-font);
+    font-size: 3rem;
+    width: 34.375rem;
+    font-weight: 400;
+    color: #333333;
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+}
+
+.Section-2 a {
+    color: var(--Secondary-color);
+    font-family: "Open Sans", sans-serif;
+    text-transform: none;
+    font-size: .875rem;
+    margin: 0;
+}
+
+.Section-3 {
+    grid-area: Section-3;
+    background-color: #F05638;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Section-3 h3 {
+    color: white;
+    font-family: var(--main-font);
+    font-size: 1.375rem;
+    text-align: center;
+    margin-top: 9px;
+    width: 14.375rem;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+.Section-3 a {
+    font-family: "Open Sans", sans-serif;
+    color: #ffc80a;
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.Section-3 .contain {
+    margin: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Section-3 .arrow {
+    font-size: .9375rem;
+}
+
+.Section-4 {
+    grid-area: Section-4;
+    display: flex;
+    overflow: hidden;
+    padding-top: 68px;
+    padding-right: 4%;
+    padding-left: 4%;
+    justify-content: space-between;
+
+}
+
+.Section-4 .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-right: 2.5rem;
+}
+
+.Section-4 .title {
+    font-family: 'Arvo', serif;
+    color: #9fa3a7;
+    /* primary color */
+    font-size: 0.75rem;
+    line-height: 20px;
+    margin-left: 92px;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+.Section-4 h3 {
+    margin-top: 0.625rem;
+    margin-bottom: 3.25rem;
+    margin-left: 88px;
+    width: 190px;
+    font-family: 'Arvo', serif;
+    font-size: 1.375rem;
+    line-height: 32px;
+    font-weight: 400;
+    color: #333;
+    padding: 0px;
+}
+
+.Section-4 img {
+    max-width: 100%;
+    align-self: flex-end;
+}
+
+.Section-4 .image {
+    width: 30.5625rem;
+    position: relative;
+    top: 2px;
+    right: 14.4375rem;
+}
+
+.Section-4 .image img {
+    width: 490px;
+}
+
+.Section-4 .right {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    width: 40%;
+}
+
+.Section-4 .descriptive-text {
+    font-family: 'Open Sans', sans-serif;
+    color: #9fa3a7;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding: -30px;
+}
+
+.Section-4 a {
+    font-family: 'Open Sans', sans-serif;
+    color: #27b9c2;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 0;
+}
+
+.Section-4 a .arrow {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.Section-5 {
+    grid-area: Section-5;
+    background-color: #8F76BC;
+    text-align: center;
+}
+
+.text-Secondary {
+    text-align: center;
+    color: white;
+    width: 74%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 54px;
+    font-size: .875rem;
+}
+
+.Section-5 .Title {
+    font-family: 'Open Sans',
+        sans-serif;
+    color: white;
+    padding: 2px 22px 1px 30px;
+    border-radius: 60px;
+    background-color: hsla(0, 0%, 100%, .08);
+    font-size: 10px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.Section-5 h2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 20px;
+    color: white;
+    font-family: var(--main-font);
+}
+
+.Section-5 a {
+    font-family: 'Open Sans',
+        sans-serif;
+    color: black;
+    background-color: #FFC80A;
+    margin-top: 30px;
+    padding: 14px 28px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    position: relative;
+    top:0;
+
+
+}
+
+.image-Circle {
+    margin-top: 50px;
+    display: flex;
+    width: 380px;
+    height: 380px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #8166b0;
+}
+
+.Section-5 .Discriptive-text {
+
+    font-family: Montserrat, sans-serif;
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.image-Circle img:nth-child(1) {
+    position: relative;
+    width: 15px;
+    height: 20px;
+    margin: 0 10px 0 0;
+}
+
+.image-Circle img:nth-child(2) {
+    position: relative;
+    left: -8px;
+    margin-top: 20px;
+    width: 239px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.Section-6 {
+    grid-area: Section-6;
+    background-color: #F7F8F9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.Section-6 img {
+    position: relative;
+    left: -7%;
+    width: 250px;
+}
+
+.Section-6 a {
+    color: var(--Secondary-color);
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.Section-6 .arrow {
+    font-size: .9375rem;
+}
+
+.Section-6 h3 {
+    margin-top: .625rem;
+    margin-bottom: 1.25rem;
+    font-family: Arvo, sans-serif;
+    font-size: 1.375rem;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.Section-7 {
+    grid-area: Section-7;
+    background-color: #93B6B7;
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url(../images/5bc2f42d5a5ed97dab707e7e_UX.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    padding: 20px;
+    overflow: hidden;
+
+}
+
+.Section-7 img {
+    position: relative;
+    right: 104px;
+    top: -26px;
+    width: 746px;
+}
+
+.Section-7 span {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #fa684f;
+    font-size: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.Section-7 h3 {
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    width: 323px;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    top: -5px;
+}
+
+.Section-8 {
+    grid-area: Section-8;
+    background-color: #38D5F4;
+
+}
+
+.Section-8 .img-container {
+    text-align: center;
+    border-radius: 50%;
+    background-color: #35cfed;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Section-8 img {
+    width: 35%;
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Section-8 h3 {
+    color: white;
+    position: relative;
+    font-family: var(--main-font);
+    top: 34px;
+    font-weight: 400;
+
+}
+
+.Section-9 {
+    grid-area: Section-9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+}
+
+.Section-9 span {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #7BC424;
+    font-size: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: translate(-50%, -50%);
+}
+
+.Section-9 h3 {
+    position: relative;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 22px;
+    width: 70%;
+    margin-top: 2.1875rem;
+
+}
+
+.Section-10 {
+    grid-area: Section-10;
+    background-color: #2C2C2C;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.Section-10 img {
+    width: 38%;
+    align-self: end;
+
+}
+
+.Section-10 h3 {
+    color: white;
+    font-family: var(--main-font);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    align-self: center;
+}
